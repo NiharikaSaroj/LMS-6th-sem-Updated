@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.IssueController">
+
+    <children>
+
+        <Label text="Issue Book" layoutX="140.0" layoutY="20.0" />
+
+        <Label text="Student ID:" layoutX="50.0" layoutY="80.0" />
+        <TextField fx:id="studentIdField" layoutX="150.0" layoutY="75.0" />
+
+        <Label text="Book ID:" layoutX="50.0" layoutY="120.0" />
+        <TextField fx:id="bookIdField" layoutX="150.0" layoutY="115.0" />
+
+        <Button text="Issue Book"
+                layoutX="150.0"
+                layoutY="160.0"
+                onAction="#handleIssueBook" />
+
+        <Button text="Return Book"
+        layoutX="150.0"
+        layoutY="200.0"
+        onAction="#handleReturnBook" />
+
+        <Label fx:id="statusLabel"
+               layoutX="120.0"
+               layoutY="210.0" />
+
+        <Button text="Dashboard"
+                layoutX="150.0"
+                layoutY="250.0"
+                onAction="#openDashboard" />
+
+    </children>
+
+</AnchorPane>

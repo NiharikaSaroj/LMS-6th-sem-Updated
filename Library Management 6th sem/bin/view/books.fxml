@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.BookController"
+            stylesheets="@../style/style.css">
+
+    <!-- LEFT SIDEBAR -->
+    <left>
+        <VBox spacing="15" prefWidth="250" styleClass="sidebar">
+
+            <Label text="📚 LMS" styleClass="sidebar-title"/>
+
+            <Button text="🏠 Dashboard"
+                    styleClass="sidebar-button"/>
+
+            <Button text="📖 Manage Books"
+                    styleClass="sidebar-button"/>
+
+            <Button text="👨‍🎓 Students"
+                    styleClass="sidebar-button"
+                    onAction="#openStudents"/>
+
+            <Button text="📦 Issued Books"
+                    styleClass="sidebar-button"
+                    onAction="#openIssueSystem"/>
+
+            <Button text="⚙ Settings"
+                    styleClass="sidebar-button"/>
+
+        </VBox>
+    </left>
+
+    <!-- TOP BAR -->
+    <top>
+        <HBox alignment="CENTER_LEFT"
+              spacing="20"
+              styleClass="topbar">
+
+            <Label text="Library Dashboard"
+                   styleClass="heading"/>
+
+        </HBox>
+    </top>
+
+    <!-- CENTER -->
+    <center>
+        <VBox spacing="20" styleClass="content-area">
+
+            <!-- DASHBOARD CARDS -->
+            <HBox spacing="20">
+
+                <VBox spacing="10" prefWidth="220" styleClass="card">
+                    <Label text="Total Books" styleClass="card-title"/>
+                    <Label fx:id="totalBooksLabel" text="0" styleClass="card-value"/>
+                </VBox>
+
+                <VBox spacing="10" prefWidth="220" styleClass="card">
+                    <Label text="Available Books" styleClass="card-title"/>
+                    <Label fx:id="availableBooksLabel" text="0" styleClass="card-value"/>
+                </VBox>
+
+                <VBox spacing="10" prefWidth="220" styleClass="card">
+                    <Label text="Issued Books" styleClass="card-title"/>
+                    <Label fx:id="issuedBooksLabel" text="0" styleClass="card-value"/>
+                </VBox>
+
+            </HBox>
+
+            <!-- SEARCH -->
+            <TextField fx:id="searchField"
+                       promptText="🔍 Search by title or author..."
+                       prefWidth="400"
+                       onKeyReleased="#searchBooks"/>
+
+            <!-- TABLE -->
+            <TableView fx:id="bookTable"
+                       prefHeight="400"
+                       onMouseClicked="#selectBook">
+
+                <columns>
+
+                    <TableColumn fx:id="idColumn" text="ID" prefWidth="60"/>
+                    <TableColumn fx:id="titleColumn" text="Title" prefWidth="180"/>
+                    <TableColumn fx:id="authorColumn" text="Author" prefWidth="150"/>
+                    <TableColumn fx:id="categoryColumn" text="Category" prefWidth="140"/>
+                    <TableColumn fx:id="statusColumn" text="Status" prefWidth="120"/>
+
+                </columns>
+
+            </TableView>
+
+            <!-- FORM -->
+            <VBox spacing="15" styleClass="card">
+
+                <Label text="Manage Book"
+                       style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+                <HBox spacing="15">
+
+                    <TextField fx:id="titleField"
+                               promptText="Book Title"
+                               prefWidth="180"/>
+
+                    <TextField fx:id="authorField"
+                               promptText="Author Name"
+                               prefWidth="180"/>
+
+                    <ComboBox fx:id="categoryBox"
+                              promptText="Category"
+                              prefWidth="150"/>
+
+                    <ComboBox fx:id="statusBox"
+                              promptText="Status"
+                              prefWidth="150"/>
+
+                </HBox>
+
+                <HBox spacing="15">
+
+                    <Button text="➕ Add Book"
+                            onAction="#addBook"
+                            styleClass="primary-button"/>
+
+                    <Button text="✏ Update Book"
+                            onAction="#updateBook"
+                            styleClass="primary-button"/>
+
+                    <Button text="🗑 Delete Book"
+                            onAction="#deleteBook"
+                            styleClass="delete-button"/>
+
+                </HBox>
+
+            </VBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>

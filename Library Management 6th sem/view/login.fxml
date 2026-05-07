@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.LoginController"
+            stylesheets="@../style/style.css"
+            prefHeight="600"
+            prefWidth="900">
+
+    <children>
+
+        <HBox prefHeight="600" prefWidth="900">
+
+            <!-- LEFT SIDE -->
+            <VBox alignment="CENTER"
+                  prefWidth="450"
+                  style="-fx-background-color: linear-gradient(to bottom right, #2563eb, #1e3a8a);">
+
+                <Label text="📚 Library Management System"
+                       style="-fx-text-fill: white;
+                              -fx-font-size: 30px;
+                              -fx-font-weight: bold;"/>
+
+                <Label text="Professional Smart LMS"
+                       style="-fx-text-fill: white;
+                              -fx-font-size: 16px;"/>
+
+            </VBox>
+
+            <!-- RIGHT SIDE -->
+            <VBox alignment="CENTER"
+                  spacing="20"
+                  prefWidth="450"
+                  style="-fx-background-color: white;">
+
+                <Label text="Login"
+                       style="-fx-font-size: 30px;
+                              -fx-font-weight: bold;"/>
+
+                <TextField fx:id="usernameField"
+                           promptText="Username"
+                           prefWidth="250"/>
+
+                <PasswordField fx:id="passwordField"
+                               promptText="Password"
+                               prefWidth="250"/>
+
+                <ComboBox fx:id="roleBox"
+                          promptText="Select Role"
+                          prefWidth="250"/>
+
+                <Button text="Login"
+                        onAction="#login"
+                        styleClass="primary-button"/>
+
+            </VBox>
+
+        </HBox>
+
+    </children>
+
+</AnchorPane>

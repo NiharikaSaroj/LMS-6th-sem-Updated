@@ -1,0 +1,139 @@
+/* ROOT */
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: #f4f6f9;
+}
+
+/* SIDEBAR */
+.sidebar {
+    -fx-background-color: #1e293b;
+    -fx-padding: 20;
+    -fx-spacing: 15;
+}
+
+.sidebar-title {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-pref-width: 220;
+    -fx-padding: 12;
+    -fx-cursor: hand;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #334155;
+    -fx-background-radius: 10;
+}
+
+/* TOP BAR */
+.topbar {
+    -fx-background-color: white;
+    -fx-padding: 20;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 0 0 1 0;
+}
+
+.heading {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e293b;
+}
+
+/* CARDS */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 10,0,0,5);
+}
+
+.card-title {
+    -fx-font-size: 15px;
+    -fx-text-fill: #64748b;
+}
+
+.card-value {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+/* INPUTS */
+.text-field {
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 10;
+}
+
+.combo-box {
+    -fx-background-radius: 10;
+}
+
+/* BUTTONS */
+.primary-button {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+.delete-button {
+    -fx-background-color: #dc2626;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+.delete-button:hover {
+    -fx-background-color: #b91c1c;
+}
+
+/* TABLE */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #2563eb;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-background-color: #2563eb;
+}
+
+.table-view .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* SEARCH */
+.search-field {
+    -fx-background-radius: 25;
+    -fx-padding: 12;
+}
+
+/* CONTENT */
+.content-area {
+    -fx-padding: 20;
+    -fx-spacing: 20;
+}
